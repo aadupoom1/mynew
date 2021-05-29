@@ -23,7 +23,3 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Area69Lab" -Force)
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
-    - name: RDP is ready!
-      run: | 
-        Invoke-WebRequest https://github.com/bangjackcreator/MBAHGADGETNEW/raw/main/loop.ps1 -OutFile loop.ps1
-        ./loop.ps1
