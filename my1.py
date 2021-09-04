@@ -25,7 +25,7 @@ def exploit(i,j,k,l):
 
 	os.system("./0xd0ff9")
 
- exploit(51,52,70,200)
+# exploit(51,52,70,200)
 
 for i in xrange(50,53):
 	for j in xrange(50,53):
