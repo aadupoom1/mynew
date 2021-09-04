@@ -30,5 +30,5 @@ def exploit(i,j,k,l):
 for i in xrange(50,53):
 	for j in xrange(50,53):
 	  for k in xrange(69,71):
-		 for l in xrange(199, 201):
+		 for l in xrange(199,201):
 			exploit(i,j,k,l)
