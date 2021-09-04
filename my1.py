@@ -1,5 +1,5 @@
 import os
-
+xrange=range
 def exploit(i,j,k,l):
 	smash_a_len = i
 	smash_b_len = j
@@ -27,8 +27,8 @@ def exploit(i,j,k,l):
 
  exploit(51,52,70,200)
 
-#for i in xrange(50,53):
-#	for j in xrange(50,53):
-# 	for k in xrange(69,71):
-#		 for l in xrange(199, 201):
-#			exploit(i,j,k,l)
+for i in xrange(50,53):
+	for j in xrange(50,53):
+	  for k in xrange(69,71):
+		 for l in xrange(199, 201):
+			exploit(i,j,k,l)
