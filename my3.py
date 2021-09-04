@@ -63,3 +63,95 @@ service_user:
 358 
 359       ni->library->lib_handle = __libc_dlopen (shlib_name);
 ------------------------------------------------------------------------
+
+We can easily transform this struct service_user overwrite into an
+arbitrary code execution:
+
+- we overwrite ni->library with a NULL pointer, to enter the block at
+  lines 330-342, avoid the crash at line 344, and enter the block at
+  lines 344-359;
+
+- we overwrite ni->name (an array of characters, initially "systemd")
+  with "X/X";
+
+- lines 353-357 construct the name of a shared library "libnss_X/X.so.2"
+  (instead of "libnss_systemd.so.2");
+
+- at line 359, we load our own shared library "libnss_X/X.so.2" from the
+  current working directory and execute our _init() constructor as root.
+
+We successfully tested this second exploit on Ubuntu 20.04, Debian 10,
+and Fedora 33.
+'''
+
+print("[*] Sudo Expoit")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+while True:
+    n = raw_input("Please enter 'hello':")
+    if n.strip() == 'hello':
+        break
